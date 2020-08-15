@@ -8,7 +8,7 @@ with open('lost_list.pkl', 'rb') as f:
     lost_list = pickle.load(f)
 
 #plot all epochs
-y = lost_list
+y = lost_list #loss is save by take average loss in 20 times iterations #each epochs have 9295 times iterations
 x = numpy.arange(len(y))
 plt.plot(x, y, label='train')
 plt.xlabel('iterations (x' + '20' + ')')
@@ -17,7 +17,7 @@ plt.show()
 
 #plot 10 epoch
 for i in range(5):
-    y = lost_list[(i*9295)*10//20:((i+1)*9295)*10//20]
+    y = lost_list[(i*9295)*10//20:((i+1)*9295)*10//20] 
     x = numpy.arange(len(y))
     plt.plot(x, y, label='train')
     plt.xlabel('iterations (x' + '20' + ') in epoch' +str(i*10) +'to' +str((i+1)*10))
@@ -26,7 +26,7 @@ for i in range(5):
 
 #plot each epoch
 for i in range(50):
-    y = lost_list[(i*9295)//20:((i+1)*9295)//20]
+    y = lost_list[(i*9295)//20:((i+1)*9295)//20] 
     x = numpy.arange(len(y))
     plt.plot(x, y, label='train')
     plt.xlabel('iterations (x' + '20' + ') in epoch' +str(i+1))
