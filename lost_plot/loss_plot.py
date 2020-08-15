@@ -20,7 +20,7 @@ for i in range(5):
     y = lost_list[(i*9295)*10//20:((i+1)*9295)*10//20] 
     x = numpy.arange(len(y))
     plt.plot(x, y, label='train')
-    plt.xlabel('iterations (x' + '20' + ') in epoch' +str(i*10) +'to' +str((i+1)*10))
+    plt.xlabel('iterations (x' + '20' + ') in epoch' +str(i*10) +' to ' +str((i+1)*10))
     plt.ylabel('loss')
     plt.show()
 
